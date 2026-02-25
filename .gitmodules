@@ -1,0 +1,6 @@
+[submodule "submodules/vggt"]
+	path = submodules/vggt
+	url = https://github.com/facebookresearch/vggt.git
+[submodule "submodules/lmms-eval"]
+	path = submodules/lmms-eval
+	url = https://github.com/EvolvingLMMs-Lab/lmms-eval.git
