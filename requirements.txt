@@ -1,0 +1,23 @@
+# Spa3R
+torch
+torchvision
+lightning
+hydra-core
+rich
+einops
+tensorboard
+matplotlib
+scikit-learn
+# open3d  # Optional for point cloud visualization
+
+# Spa3-VLM
+transformers==4.50.0
+deepspeed==0.16.4
+mpi4py
+mpich
+peft==0.17.1
+
+decord
+spacy
+nltk
+pycocoevalcap

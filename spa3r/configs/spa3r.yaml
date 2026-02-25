@@ -1,0 +1,58 @@
+data:
+  dataset:
+    type: ConcatDataset
+    datasets:
+      - _target_: spa3r.data.datasets.ScanNet
+        data_root: /horizon-bucket/robot_lab/users/haoyi.jiang/data/scannet_processed/
+        sampling_interval: [2, 6]
+        target_width: 518
+      - _target_: spa3r.data.datasets.ScanNetPP
+        split: train
+        data_root: /horizon-bucket/robot_lab/users/haoyi.jiang/data/scannetpp/
+        sampling_interval: [20, 60]
+        target_width: 518
+
+  num_workers: 4
+  pin_memory: true
+  batch_sampler:
+    _target_: spa3r.data.DynamicBatchSampler
+    num_imgs_per_sample: [4, 12]
+    num_imgs_per_gpu: 24
+  collate_fn:
+    _target_: spa3r.data.AlignTensorSizesCollate
+
+model:
+  type: Spa3R
+  embed_dim: 768
+  mask_ratio: 0.5
+  asymmetric_masking: False
+  num_queries: 256
+  num_encoder_layers: 6
+  num_decoder_layers: 6
+
+optimizer:
+  type: AdamW
+  lr: 2.0e-3
+  weight_decay: 1.0e-4
+
+scheduler:
+  type: CosineAnnealingLR
+  interval: step
+  T_max: 8e4
+  eta_min: 2.0e-4
+
+trainer:
+  devices: 8
+  max_steps: 8e4
+  precision: 16-mixed
+  accumulate_grad_batches: 2
+  gradient_clip_val: 1.0
+  use_distributed_sampler: False
+  sync_batchnorm: True
+  enable_progress_bar: False
+
+matmul_precision: medium
+
+hydra:
+  run:
+    dir: outputs/spa3r  # ${now:%Y%m%d-%H%M%S}
