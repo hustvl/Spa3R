@@ -28,20 +28,20 @@ SPAR = {
 }
 
 SPAR_234K = {
-    "annotation_path": "/home/users/haoyi.jiang/.cache/huggingface/hub/datasets--zd11024--VG-LLM-Data/snapshots/e13a902399b0ee4b0e4a28a18015625c6b7671b9/train/spar_234k.json",
-    "data_path": "/horizon-bucket/robot_lab/users/haoyi.jiang/data/",
+    "annotation_path": "PATH_TO_SPAR_234K_ANNOTATION",
+    "data_path": "data/media",
     "tag": "3d",
 }
 
 LLAVA_HOUND = {
-    "annotation_path": "/home/users/haoyi.jiang/.cache/huggingface/hub/datasets--zd11024--VG-LLM-Data/snapshots/e13a902399b0ee4b0e4a28a18015625c6b7671b9/train/llava_hound_255k.json",
+    "annotation_path": "PATH_TO_LLAVA_HOUND_ANNOTATION",
     "data_path": "data/media",
     "tag": "2d",
 }
 
 LLAVA_HOUND_64K = {
-    "annotation_path": "/home/users/haoyi.jiang/.cache/huggingface/hub/datasets--zd11024--VG-LLM-Data/snapshots/e13a902399b0ee4b0e4a28a18015625c6b7671b9/train/llava_hound_64k.json",
-    "data_path": "/horizon-bucket/robot_lab/users/haoyi.jiang/data/",
+    "annotation_path": "PATH_TO_LLAVA_HOUND_64K_ANNOTATION",
+    "data_path": "data/media",
     "tag": "2d",
 }
 
@@ -64,26 +64,26 @@ SCAN2CAP = {
 }
 
 VLM3R_SCANNET = {
-    "annotation_path": "/horizon-bucket/robot_lab/users/haoyi.jiang/data/spa3r/vlm3r_scannet.jsonl",
-    "data_path": "/horizon-bucket/robot_lab/users/haoyi.jiang/data/scannet_processed/",
+    "annotation_path": "PATH_TO_VLM3R_SCANNET_ANNOTATION",
+    "data_path": "data/media",
     "tag": "3d",
 }
 
 VLM3R_SCANNETPP = {
-    "annotation_path": "/horizon-bucket/robot_lab/users/haoyi.jiang/data/spa3r/vlm3r_scannetpp.jsonl",
-    "data_path": "/horizon-bucket/robot_lab/users/haoyi.jiang/data/scannetpp/data/",
+    "annotation_path": "PATH_TO_VLM3R_SCANNETPP_ANNOTATION",
+    "data_path": "data/media",
     "tag": "3d",
 }
 
 VLM3R_ROUTE_PLAN = {
-    "annotation_path": "/horizon-bucket/robot_lab/users/haoyi.jiang/data/spa3r/vlm3r_route_plan.jsonl",
-    "data_path": "/horizon-bucket/robot_lab/users/haoyi.jiang/data/VSI-590K/",
+    "annotation_path": "PATH_TO_VLM3R_ROUTE_PLAN_ANNOTATION",
+    "data_path": "data/media",
     "tag": "3d",
 }
 
 VSI_590K = {
-    "annotation_path": "/horizon-bucket/robot_lab/users/haoyi.jiang/data/spa3r/vsi_590k.jsonl",
-    "data_path": "/horizon-bucket/robot_lab/users/haoyi.jiang/data/VSI-590K/",
+    "annotation_path": "PATH_TO_VSI_590K_ANNOTATION",
+    "data_path": "data/media",
     "tag": "3d",
 }
 
