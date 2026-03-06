@@ -38,10 +38,10 @@ We utilize a combination of large-scale indoor scene datasets: [ScanNet](http://
 
 ### 2. Instruction Tuning
 
-* **Video-centric VSI-Bench:** We fine-tune our model on the [VSI-590K](https://huggingface.co/datasets/nyu-visionx/VSI-590K) dataset, with our processed [annotations](https://huggingface.co/datasets/hustvl/Spa3R-VLM).
-* **Image-based benchmarks:** We use a composite training set. Please refer to the [VG-LLM datasets](https://github.com/LaVi-Lab/VG-LLM?tab=readme-ov-file#datasets).
+* **Video-centric VSI-Bench:** We fine-tune our model on the [VSI-590K](https://huggingface.co/datasets/nyu-visionx/VSI-590K) dataset.
+* **Image-based benchmarks:** We use a composite training set aligned with [VG-LLM](https://github.com/LaVi-Lab/VG-LLM?tab=readme-ov-file#datasets). 
 
-Configure the local data and annotation paths in `data/__init__.py` before starting the training.
+Our processed annotations are available [here](https://huggingface.co/datasets/hustvl/Spa3R-VLM). Please configure the local data and annotation paths in `data/__init__.py` before starting the training.
 
 ## Training
 
